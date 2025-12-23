@@ -55,8 +55,6 @@ build CMakeFiles/hft_core.dir/src/core/utils.cpp.o: CXX_COMPILER__hft_core_Relea
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_core.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_core.dir/src/core
-  TARGET_COMPILE_PDB = CMakeFiles/hft_core.dir/hft_core.pdb
-  TARGET_PDB = lib/libhft_core.pdb
 
 
 # =============================================================================
@@ -71,9 +69,8 @@ build lib/libhft_core.a: CXX_STATIC_LIBRARY_LINKER__hft_core_Release CMakeFiles/
   OBJECT_DIR = CMakeFiles/hft_core.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/hft_core.dir/hft_core.pdb
   TARGET_FILE = lib/libhft_core.a
-  TARGET_PDB = lib/libhft_core.pdb
+  TARGET_PDB = hft_core.a.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target hft_protocol
@@ -91,8 +88,6 @@ build CMakeFiles/hft_protocol.dir/src/protocol/fix_parser.cpp.o: CXX_COMPILER__h
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_protocol.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_protocol.dir/src/protocol
-  TARGET_COMPILE_PDB = CMakeFiles/hft_protocol.dir/hft_protocol.pdb
-  TARGET_PDB = lib/libhft_protocol.pdb
 
 build CMakeFiles/hft_protocol.dir/src/protocol/fix_message.cpp.o: CXX_COMPILER__hft_protocol_Release /hft/src/protocol/fix_message.cpp || cmake_object_order_depends_target_hft_protocol
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -101,8 +96,6 @@ build CMakeFiles/hft_protocol.dir/src/protocol/fix_message.cpp.o: CXX_COMPILER__
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_protocol.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_protocol.dir/src/protocol
-  TARGET_COMPILE_PDB = CMakeFiles/hft_protocol.dir/hft_protocol.pdb
-  TARGET_PDB = lib/libhft_protocol.pdb
 
 build CMakeFiles/hft_protocol.dir/src/protocol/websocket_handler.cpp.o: CXX_COMPILER__hft_protocol_Release /hft/src/protocol/websocket_handler.cpp || cmake_object_order_depends_target_hft_protocol
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -111,8 +104,6 @@ build CMakeFiles/hft_protocol.dir/src/protocol/websocket_handler.cpp.o: CXX_COMP
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_protocol.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_protocol.dir/src/protocol
-  TARGET_COMPILE_PDB = CMakeFiles/hft_protocol.dir/hft_protocol.pdb
-  TARGET_PDB = lib/libhft_protocol.pdb
 
 build CMakeFiles/hft_protocol.dir/src/protocol/rest_handler.cpp.o: CXX_COMPILER__hft_protocol_Release /hft/src/protocol/rest_handler.cpp || cmake_object_order_depends_target_hft_protocol
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -121,8 +112,6 @@ build CMakeFiles/hft_protocol.dir/src/protocol/rest_handler.cpp.o: CXX_COMPILER_
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_protocol.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_protocol.dir/src/protocol
-  TARGET_COMPILE_PDB = CMakeFiles/hft_protocol.dir/hft_protocol.pdb
-  TARGET_PDB = lib/libhft_protocol.pdb
 
 
 # =============================================================================
@@ -137,9 +126,8 @@ build lib/libhft_protocol.a: CXX_STATIC_LIBRARY_LINKER__hft_protocol_Release CMa
   OBJECT_DIR = CMakeFiles/hft_protocol.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/hft_protocol.dir/hft_protocol.pdb
   TARGET_FILE = lib/libhft_protocol.a
-  TARGET_PDB = lib/libhft_protocol.pdb
+  TARGET_PDB = hft_protocol.a.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target hft_matching
@@ -156,8 +144,6 @@ build CMakeFiles/hft_matching.dir/src/matching/order.cpp.o: CXX_COMPILER__hft_ma
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_matching.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_matching.dir/src/matching
-  TARGET_COMPILE_PDB = CMakeFiles/hft_matching.dir/hft_matching.pdb
-  TARGET_PDB = lib/libhft_matching.pdb
 
 build CMakeFiles/hft_matching.dir/src/matching/order_book.cpp.o: CXX_COMPILER__hft_matching_Release /hft/src/matching/order_book.cpp || cmake_object_order_depends_target_hft_matching
   DEP_FILE = CMakeFiles/hft_matching.dir/src/matching/order_book.cpp.o.d
@@ -165,8 +151,6 @@ build CMakeFiles/hft_matching.dir/src/matching/order_book.cpp.o: CXX_COMPILER__h
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_matching.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_matching.dir/src/matching
-  TARGET_COMPILE_PDB = CMakeFiles/hft_matching.dir/hft_matching.pdb
-  TARGET_PDB = lib/libhft_matching.pdb
 
 build CMakeFiles/hft_matching.dir/src/matching/matching_engine.cpp.o: CXX_COMPILER__hft_matching_Release /hft/src/matching/matching_engine.cpp || cmake_object_order_depends_target_hft_matching
   DEP_FILE = CMakeFiles/hft_matching.dir/src/matching/matching_engine.cpp.o.d
@@ -174,8 +158,6 @@ build CMakeFiles/hft_matching.dir/src/matching/matching_engine.cpp.o: CXX_COMPIL
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_matching.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_matching.dir/src/matching
-  TARGET_COMPILE_PDB = CMakeFiles/hft_matching.dir/hft_matching.pdb
-  TARGET_PDB = lib/libhft_matching.pdb
 
 build CMakeFiles/hft_matching.dir/src/matching/price_level.cpp.o: CXX_COMPILER__hft_matching_Release /hft/src/matching/price_level.cpp || cmake_object_order_depends_target_hft_matching
   DEP_FILE = CMakeFiles/hft_matching.dir/src/matching/price_level.cpp.o.d
@@ -183,8 +165,6 @@ build CMakeFiles/hft_matching.dir/src/matching/price_level.cpp.o: CXX_COMPILER__
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_matching.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_matching.dir/src/matching
-  TARGET_COMPILE_PDB = CMakeFiles/hft_matching.dir/hft_matching.pdb
-  TARGET_PDB = lib/libhft_matching.pdb
 
 
 # =============================================================================
@@ -199,9 +179,8 @@ build lib/libhft_matching.a: CXX_STATIC_LIBRARY_LINKER__hft_matching_Release CMa
   OBJECT_DIR = CMakeFiles/hft_matching.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/hft_matching.dir/hft_matching.pdb
   TARGET_FILE = lib/libhft_matching.a
-  TARGET_PDB = lib/libhft_matching.pdb
+  TARGET_PDB = hft_matching.a.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target hft_marketdata
@@ -219,8 +198,6 @@ build CMakeFiles/hft_marketdata.dir/src/marketdata/market_data_handler.cpp.o: CX
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_marketdata.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_marketdata.dir/src/marketdata
-  TARGET_COMPILE_PDB = CMakeFiles/hft_marketdata.dir/hft_marketdata.pdb
-  TARGET_PDB = lib/libhft_marketdata.pdb
 
 build CMakeFiles/hft_marketdata.dir/src/marketdata/book_builder.cpp.o: CXX_COMPILER__hft_marketdata_Release /hft/src/marketdata/book_builder.cpp || cmake_object_order_depends_target_hft_marketdata
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -229,8 +206,6 @@ build CMakeFiles/hft_marketdata.dir/src/marketdata/book_builder.cpp.o: CXX_COMPI
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_marketdata.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_marketdata.dir/src/marketdata
-  TARGET_COMPILE_PDB = CMakeFiles/hft_marketdata.dir/hft_marketdata.pdb
-  TARGET_PDB = lib/libhft_marketdata.pdb
 
 build CMakeFiles/hft_marketdata.dir/src/marketdata/feed_simulator.cpp.o: CXX_COMPILER__hft_marketdata_Release /hft/src/marketdata/feed_simulator.cpp || cmake_object_order_depends_target_hft_marketdata
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -239,8 +214,6 @@ build CMakeFiles/hft_marketdata.dir/src/marketdata/feed_simulator.cpp.o: CXX_COM
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/hft_marketdata.dir
   OBJECT_FILE_DIR = CMakeFiles/hft_marketdata.dir/src/marketdata
-  TARGET_COMPILE_PDB = CMakeFiles/hft_marketdata.dir/hft_marketdata.pdb
-  TARGET_PDB = lib/libhft_marketdata.pdb
 
 
 # =============================================================================
@@ -255,9 +228,8 @@ build lib/libhft_marketdata.a: CXX_STATIC_LIBRARY_LINKER__hft_marketdata_Release
   OBJECT_DIR = CMakeFiles/hft_marketdata.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/hft_marketdata.dir/hft_marketdata.pdb
   TARGET_FILE = lib/libhft_marketdata.a
-  TARGET_PDB = lib/libhft_marketdata.pdb
+  TARGET_PDB = hft_marketdata.a.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target matching_engine
@@ -275,8 +247,6 @@ build CMakeFiles/matching_engine.dir/src/apps/matching_engine_main.cpp.o: CXX_CO
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/matching_engine.dir
   OBJECT_FILE_DIR = CMakeFiles/matching_engine.dir/src/apps
-  TARGET_COMPILE_PDB = CMakeFiles/matching_engine.dir/
-  TARGET_PDB = bin/matching_engine.pdb
 
 
 # =============================================================================
@@ -293,9 +263,8 @@ build bin/matching_engine: CXX_EXECUTABLE_LINKER__matching_engine_Release CMakeF
   OBJECT_DIR = CMakeFiles/matching_engine.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/matching_engine.dir/
   TARGET_FILE = bin/matching_engine
-  TARGET_PDB = bin/matching_engine.pdb
+  TARGET_PDB = matching_engine.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target market_data_feed
@@ -313,8 +282,6 @@ build CMakeFiles/market_data_feed.dir/src/apps/market_data_feed_main.cpp.o: CXX_
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/market_data_feed.dir
   OBJECT_FILE_DIR = CMakeFiles/market_data_feed.dir/src/apps
-  TARGET_COMPILE_PDB = CMakeFiles/market_data_feed.dir/
-  TARGET_PDB = bin/market_data_feed.pdb
 
 
 # =============================================================================
@@ -331,9 +298,8 @@ build bin/market_data_feed: CXX_EXECUTABLE_LINKER__market_data_feed_Release CMak
   OBJECT_DIR = CMakeFiles/market_data_feed.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/market_data_feed.dir/
   TARGET_FILE = bin/market_data_feed
-  TARGET_PDB = bin/market_data_feed.pdb
+  TARGET_PDB = market_data_feed.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target order_gateway
@@ -351,8 +317,6 @@ build CMakeFiles/order_gateway.dir/src/apps/order_gateway_main.cpp.o: CXX_COMPIL
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/order_gateway.dir
   OBJECT_FILE_DIR = CMakeFiles/order_gateway.dir/src/apps
-  TARGET_COMPILE_PDB = CMakeFiles/order_gateway.dir/
-  TARGET_PDB = bin/order_gateway.pdb
 
 
 # =============================================================================
@@ -369,9 +333,49 @@ build bin/order_gateway: CXX_EXECUTABLE_LINKER__order_gateway_Release CMakeFiles
   OBJECT_DIR = CMakeFiles/order_gateway.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/order_gateway.dir/
   TARGET_FILE = bin/order_gateway
-  TARGET_PDB = bin/order_gateway.pdb
+  TARGET_PDB = order_gateway.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target hftperf
+
+
+#############################################
+# Order-only phony target for hftperf
+
+build cmake_object_order_depends_target_hftperf: phony || cmake_object_order_depends_target_hft_core cmake_object_order_depends_target_hft_matching
+
+build CMakeFiles/hftperf.dir/src/apps/hftperf_main.cpp.o: CXX_COMPILER__hftperf_Release /hft/src/apps/hftperf_main.cpp || cmake_object_order_depends_target_hftperf
+  DEP_FILE = CMakeFiles/hftperf.dir/src/apps/hftperf_main.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20
+  INCLUDES = -I/hft/src -I/hft/include
+  OBJECT_DIR = CMakeFiles/hftperf.dir
+  OBJECT_FILE_DIR = CMakeFiles/hftperf.dir/src/apps
+
+build CMakeFiles/hftperf.dir/src/strategy/user_strategy.cpp.o: CXX_COMPILER__hftperf_Release /hft/src/strategy/user_strategy.cpp || cmake_object_order_depends_target_hftperf
+  DEP_FILE = CMakeFiles/hftperf.dir/src/strategy/user_strategy.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20
+  INCLUDES = -I/hft/src -I/hft/include
+  OBJECT_DIR = CMakeFiles/hftperf.dir
+  OBJECT_FILE_DIR = CMakeFiles/hftperf.dir/src/strategy
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target hftperf
+
+
+#############################################
+# Link the executable bin/hftperf
+
+build bin/hftperf: CXX_EXECUTABLE_LINKER__hftperf_Release CMakeFiles/hftperf.dir/src/apps/hftperf_main.cpp.o CMakeFiles/hftperf.dir/src/strategy/user_strategy.cpp.o | lib/libhft_matching.a lib/libhft_core.a || lib/libhft_core.a lib/libhft_matching.a
+  FLAGS = -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG
+  LINK_FLAGS = -flto
+  LINK_LIBRARIES = lib/libhft_matching.a  lib/libhft_core.a
+  OBJECT_DIR = CMakeFiles/hftperf.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = bin/hftperf
+  TARGET_PDB = hftperf.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target benchmark_suite
@@ -389,8 +393,6 @@ build CMakeFiles/benchmark_suite.dir/src/benchmark/benchmark_main.cpp.o: CXX_COM
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/benchmark_suite.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark_suite.dir/src/benchmark
-  TARGET_COMPILE_PDB = CMakeFiles/benchmark_suite.dir/
-  TARGET_PDB = bin/benchmark_suite.pdb
 
 build CMakeFiles/benchmark_suite.dir/src/benchmark/latency_benchmark.cpp.o: CXX_COMPILER__benchmark_suite_Release /hft/src/benchmark/latency_benchmark.cpp || cmake_object_order_depends_target_benchmark_suite
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -399,8 +401,6 @@ build CMakeFiles/benchmark_suite.dir/src/benchmark/latency_benchmark.cpp.o: CXX_
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/benchmark_suite.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark_suite.dir/src/benchmark
-  TARGET_COMPILE_PDB = CMakeFiles/benchmark_suite.dir/
-  TARGET_PDB = bin/benchmark_suite.pdb
 
 build CMakeFiles/benchmark_suite.dir/src/benchmark/throughput_benchmark.cpp.o: CXX_COMPILER__benchmark_suite_Release /hft/src/benchmark/throughput_benchmark.cpp || cmake_object_order_depends_target_benchmark_suite
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -409,8 +409,6 @@ build CMakeFiles/benchmark_suite.dir/src/benchmark/throughput_benchmark.cpp.o: C
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/benchmark_suite.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark_suite.dir/src/benchmark
-  TARGET_COMPILE_PDB = CMakeFiles/benchmark_suite.dir/
-  TARGET_PDB = bin/benchmark_suite.pdb
 
 build CMakeFiles/benchmark_suite.dir/src/benchmark/orderbook_benchmark.cpp.o: CXX_COMPILER__benchmark_suite_Release /hft/src/benchmark/orderbook_benchmark.cpp || cmake_object_order_depends_target_benchmark_suite
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -419,8 +417,6 @@ build CMakeFiles/benchmark_suite.dir/src/benchmark/orderbook_benchmark.cpp.o: CX
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/benchmark_suite.dir
   OBJECT_FILE_DIR = CMakeFiles/benchmark_suite.dir/src/benchmark
-  TARGET_COMPILE_PDB = CMakeFiles/benchmark_suite.dir/
-  TARGET_PDB = bin/benchmark_suite.pdb
 
 
 # =============================================================================
@@ -437,9 +433,8 @@ build bin/benchmark_suite: CXX_EXECUTABLE_LINKER__benchmark_suite_Release CMakeF
   OBJECT_DIR = CMakeFiles/benchmark_suite.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/benchmark_suite.dir/
   TARGET_FILE = bin/benchmark_suite
-  TARGET_PDB = bin/benchmark_suite.pdb
+  TARGET_PDB = benchmark_suite.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target unit_tests
@@ -457,8 +452,6 @@ build CMakeFiles/unit_tests.dir/tests/test_main.cpp.o: CXX_COMPILER__unit_tests_
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/unit_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/unit_tests.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/unit_tests.dir/
-  TARGET_PDB = bin/unit_tests.pdb
 
 build CMakeFiles/unit_tests.dir/tests/test_lockfree_queue.cpp.o: CXX_COMPILER__unit_tests_Release /hft/tests/test_lockfree_queue.cpp || cmake_object_order_depends_target_unit_tests
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -467,8 +460,6 @@ build CMakeFiles/unit_tests.dir/tests/test_lockfree_queue.cpp.o: CXX_COMPILER__u
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/unit_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/unit_tests.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/unit_tests.dir/
-  TARGET_PDB = bin/unit_tests.pdb
 
 build CMakeFiles/unit_tests.dir/tests/test_memory_pool.cpp.o: CXX_COMPILER__unit_tests_Release /hft/tests/test_memory_pool.cpp || cmake_object_order_depends_target_unit_tests
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -477,8 +468,6 @@ build CMakeFiles/unit_tests.dir/tests/test_memory_pool.cpp.o: CXX_COMPILER__unit
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/unit_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/unit_tests.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/unit_tests.dir/
-  TARGET_PDB = bin/unit_tests.pdb
 
 build CMakeFiles/unit_tests.dir/tests/test_order_book.cpp.o: CXX_COMPILER__unit_tests_Release /hft/tests/test_order_book.cpp || cmake_object_order_depends_target_unit_tests
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -487,8 +476,6 @@ build CMakeFiles/unit_tests.dir/tests/test_order_book.cpp.o: CXX_COMPILER__unit_
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/unit_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/unit_tests.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/unit_tests.dir/
-  TARGET_PDB = bin/unit_tests.pdb
 
 build CMakeFiles/unit_tests.dir/tests/test_matching_engine.cpp.o: CXX_COMPILER__unit_tests_Release /hft/tests/test_matching_engine.cpp || cmake_object_order_depends_target_unit_tests
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -497,8 +484,6 @@ build CMakeFiles/unit_tests.dir/tests/test_matching_engine.cpp.o: CXX_COMPILER__
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/unit_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/unit_tests.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/unit_tests.dir/
-  TARGET_PDB = bin/unit_tests.pdb
 
 build CMakeFiles/unit_tests.dir/tests/test_fix_parser.cpp.o: CXX_COMPILER__unit_tests_Release /hft/tests/test_fix_parser.cpp || cmake_object_order_depends_target_unit_tests
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
@@ -507,8 +492,6 @@ build CMakeFiles/unit_tests.dir/tests/test_fix_parser.cpp.o: CXX_COMPILER__unit_
   INCLUDES = -I/hft/src -I/hft/include
   OBJECT_DIR = CMakeFiles/unit_tests.dir
   OBJECT_FILE_DIR = CMakeFiles/unit_tests.dir/tests
-  TARGET_COMPILE_PDB = CMakeFiles/unit_tests.dir/
-  TARGET_PDB = bin/unit_tests.pdb
 
 
 # =============================================================================
@@ -525,9 +508,8 @@ build bin/unit_tests: CXX_EXECUTABLE_LINKER__unit_tests_Release CMakeFiles/unit_
   OBJECT_DIR = CMakeFiles/unit_tests.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/unit_tests.dir/
   TARGET_FILE = bin/unit_tests
-  TARGET_PDB = bin/unit_tests.pdb
+  TARGET_PDB = unit_tests.dbg
 
 
 #############################################
@@ -633,6 +615,8 @@ build hft_matching: phony lib/libhft_matching.a
 
 build hft_protocol: phony lib/libhft_protocol.a
 
+build hftperf: phony bin/hftperf
+
 build libhft_core.a: phony lib/libhft_core.a
 
 build libhft_marketdata.a: phony lib/libhft_marketdata.a
@@ -657,7 +641,7 @@ build unit_tests: phony bin/unit_tests
 #############################################
 # Folder: /hft/build
 
-build all: phony lib/libhft_core.a lib/libhft_protocol.a lib/libhft_matching.a lib/libhft_marketdata.a bin/matching_engine bin/market_data_feed bin/order_gateway bin/benchmark_suite bin/unit_tests
+build all: phony lib/libhft_core.a lib/libhft_protocol.a lib/libhft_matching.a lib/libhft_marketdata.a bin/matching_engine bin/market_data_feed bin/order_gateway bin/hftperf bin/benchmark_suite bin/unit_tests
 
 # =============================================================================
 # Built-in targets
@@ -666,14 +650,14 @@ build all: phony lib/libhft_core.a lib/libhft_protocol.a lib/libhft_matching.a l
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake /usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config-version.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-shared.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-static.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cxx.in /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/FindBoost.cmake /usr/share/cmake-3.22/Modules/FindDoxygen.cmake /usr/share/cmake-3.22/Modules/FindOpenSSL.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeDoxyfile.in CMakeDoxygenDefaults.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake /usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config-version.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-shared.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-static.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindBoost.cmake /usr/share/cmake-3.22/Modules/FindDoxygen.cmake /usr/share/cmake-3.22/Modules/FindOpenSSL.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeDoxyfile.in CMakeDoxygenDefaults.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake /usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config-version.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-shared.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-static.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cxx.in /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/FindBoost.cmake /usr/share/cmake-3.22/Modules/FindDoxygen.cmake /usr/share/cmake-3.22/Modules/FindOpenSSL.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeDoxyfile.in CMakeDoxygenDefaults.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake /usr/lib/aarch64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config-version.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/boost_system-config.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-shared.cmake /usr/lib/aarch64-linux-gnu/cmake/boost_system-1.74.0/libboost_system-variant-static.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake /usr/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/FindBoost.cmake /usr/share/cmake-3.22/Modules/FindDoxygen.cmake /usr/share/cmake-3.22/Modules/FindOpenSSL.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeDoxyfile.in CMakeDoxygenDefaults.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -5,6 +5,7 @@
 /hft/build/CMakeFiles/matching_engine.dir
 /hft/build/CMakeFiles/market_data_feed.dir
 /hft/build/CMakeFiles/order_gateway.dir
+/hft/build/CMakeFiles/hftperf.dir
 /hft/build/CMakeFiles/benchmark_suite.dir
 /hft/build/CMakeFiles/unit_tests.dir
 /hft/build/CMakeFiles/docs.dir
