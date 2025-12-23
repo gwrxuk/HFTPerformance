@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  # Main development container
+  hft-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hft-trading-system
+    volumes:
+      - .:/hft
+      - /sys/kernel/debug:/sys/kernel/debug:ro
+    privileged: true
+    cap_add:
+      - SYS_ADMIN
+      - SYS_NICE
+      - SYS_PTRACE
+      - NET_ADMIN
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    networks:
+      - hft-network
+    environment:
+      - MALLOC_ARENA_MAX=2
+      - MALLOC_MMAP_THRESHOLD_=131072
+      - MALLOC_TRIM_THRESHOLD_=131072
+      - MALLOC_TOP_PAD_=131072
+      - MALLOC_MMAP_MAX_=65536
+    command: tail -f /dev/null
+
+  # Matching engine service
+  matching-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: matching-engine
+    privileged: true
+    cap_add:
+      - SYS_NICE
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    networks:
+      - hft-network
+    ports:
+      - "9080:8080"
+    command: ./build/bin/matching_engine
+    depends_on:
+      - hft-dev
+
+  # Market data feed simulator
+  market-data:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: market-data-feed
+    networks:
+      - hft-network
+    ports:
+      - "9090:9090"
+    command: ./build/bin/market_data_feed
+    depends_on:
+      - matching-engine
+
+  # Benchmark runner
+  benchmarks:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hft-benchmarks
+    privileged: true
+    cap_add:
+      - SYS_ADMIN
+      - SYS_NICE
+    volumes:
+      - ./results:/hft/results
+    networks:
+      - hft-network
+    command: ./build/bin/benchmark_suite
+    profiles:
+      - benchmark
+
+networks:
+  hft-network:
+    driver: bridge
+

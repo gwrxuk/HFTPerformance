@@ -1,0 +1,127 @@
+[
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_core.dir/src/core/utils.cpp.o -c /hft/src/core/utils.cpp",
+  "file": "/hft/src/core/utils.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_protocol.dir/src/protocol/fix_parser.cpp.o -c /hft/src/protocol/fix_parser.cpp",
+  "file": "/hft/src/protocol/fix_parser.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_protocol.dir/src/protocol/fix_message.cpp.o -c /hft/src/protocol/fix_message.cpp",
+  "file": "/hft/src/protocol/fix_message.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_protocol.dir/src/protocol/websocket_handler.cpp.o -c /hft/src/protocol/websocket_handler.cpp",
+  "file": "/hft/src/protocol/websocket_handler.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_protocol.dir/src/protocol/rest_handler.cpp.o -c /hft/src/protocol/rest_handler.cpp",
+  "file": "/hft/src/protocol/rest_handler.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_matching.dir/src/matching/order.cpp.o -c /hft/src/matching/order.cpp",
+  "file": "/hft/src/matching/order.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_matching.dir/src/matching/order_book.cpp.o -c /hft/src/matching/order_book.cpp",
+  "file": "/hft/src/matching/order_book.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_matching.dir/src/matching/matching_engine.cpp.o -c /hft/src/matching/matching_engine.cpp",
+  "file": "/hft/src/matching/matching_engine.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_matching.dir/src/matching/price_level.cpp.o -c /hft/src/matching/price_level.cpp",
+  "file": "/hft/src/matching/price_level.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_marketdata.dir/src/marketdata/market_data_handler.cpp.o -c /hft/src/marketdata/market_data_handler.cpp",
+  "file": "/hft/src/marketdata/market_data_handler.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_marketdata.dir/src/marketdata/book_builder.cpp.o -c /hft/src/marketdata/book_builder.cpp",
+  "file": "/hft/src/marketdata/book_builder.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/hft_marketdata.dir/src/marketdata/feed_simulator.cpp.o -c /hft/src/marketdata/feed_simulator.cpp",
+  "file": "/hft/src/marketdata/feed_simulator.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/matching_engine.dir/src/apps/matching_engine_main.cpp.o -c /hft/src/apps/matching_engine_main.cpp",
+  "file": "/hft/src/apps/matching_engine_main.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/market_data_feed.dir/src/apps/market_data_feed_main.cpp.o -c /hft/src/apps/market_data_feed_main.cpp",
+  "file": "/hft/src/apps/market_data_feed_main.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/order_gateway.dir/src/apps/order_gateway_main.cpp.o -c /hft/src/apps/order_gateway_main.cpp",
+  "file": "/hft/src/apps/order_gateway_main.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/benchmark_suite.dir/src/benchmark/benchmark_main.cpp.o -c /hft/src/benchmark/benchmark_main.cpp",
+  "file": "/hft/src/benchmark/benchmark_main.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/benchmark_suite.dir/src/benchmark/latency_benchmark.cpp.o -c /hft/src/benchmark/latency_benchmark.cpp",
+  "file": "/hft/src/benchmark/latency_benchmark.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/benchmark_suite.dir/src/benchmark/throughput_benchmark.cpp.o -c /hft/src/benchmark/throughput_benchmark.cpp",
+  "file": "/hft/src/benchmark/throughput_benchmark.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/benchmark_suite.dir/src/benchmark/orderbook_benchmark.cpp.o -c /hft/src/benchmark/orderbook_benchmark.cpp",
+  "file": "/hft/src/benchmark/orderbook_benchmark.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/unit_tests.dir/tests/test_main.cpp.o -c /hft/tests/test_main.cpp",
+  "file": "/hft/tests/test_main.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/unit_tests.dir/tests/test_lockfree_queue.cpp.o -c /hft/tests/test_lockfree_queue.cpp",
+  "file": "/hft/tests/test_lockfree_queue.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/unit_tests.dir/tests/test_memory_pool.cpp.o -c /hft/tests/test_memory_pool.cpp",
+  "file": "/hft/tests/test_memory_pool.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/unit_tests.dir/tests/test_order_book.cpp.o -c /hft/tests/test_order_book.cpp",
+  "file": "/hft/tests/test_order_book.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/unit_tests.dir/tests/test_matching_engine.cpp.o -c /hft/tests/test_matching_engine.cpp",
+  "file": "/hft/tests/test_matching_engine.cpp"
+},
+{
+  "directory": "/hft/build",
+  "command": "/usr/bin/g++ -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/hft/src -I/hft/include -O3 -DNDEBUG -Wall -Wextra -Wpedantic -Werror -march=native -mtune=native -ffast-math -flto -O3 -DNDEBUG -std=c++20 -o CMakeFiles/unit_tests.dir/tests/test_fix_parser.cpp.o -c /hft/tests/test_fix_parser.cpp",
+  "file": "/hft/tests/test_fix_parser.cpp"
+}
+]
