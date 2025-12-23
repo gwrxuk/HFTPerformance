@@ -1,0 +1,9 @@
+{
+    "duration_sec": 5,
+    "mode": "single_thread",
+    "message_rate": 100000,
+    "message_pattern": "poisson",
+    "strategy": "pass_through",
+    "affinity": [0],
+    "log_file": "results_simple.csv"
+}

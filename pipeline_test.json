@@ -1,0 +1,11 @@
+{
+    "duration_sec": 5,
+    "mode": "pipeline",
+    "pipeline_stages": 2,
+    "message_rate": 200000,
+    "strategy": "pass_through",
+    "affinity": [1, 2],
+    "use_polling": true,
+    "log_file": "results_pipeline.csv"
+}
+

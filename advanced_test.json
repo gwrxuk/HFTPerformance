@@ -1,0 +1,33 @@
+{
+    "duration_sec": 30,
+    "mode": "single_thread",
+    "message_rate": 100000,
+    "message_pattern": "poisson",
+    "strategy": "pass_through",
+    "affinity": [0],
+    "log_file": "results_advanced.csv",
+    
+    "// Gap Recovery Simulation": "Pause for gap_pause_ms then burst gap_burst_count messages",
+    "gap_pause_ms": 500,
+    "gap_burst_count": 1000,
+    "gap_interval_sec": 10,
+    
+    "// Trade Signal Ratio": "Fraction of ticks that trigger orders (0.0-1.0)",
+    "trade_signal_ratio": 0.3,
+    
+    "// Multi-Symbol Simulation": "Round-robin through multiple instruments",
+    "num_symbols": 5,
+    "symbol_prefix": "EQUITY",
+    
+    "// Jitter Injection": "Add realistic network/processing jitter",
+    "jitter_min_ns": 100,
+    "jitter_max_ns": 5000,
+    
+    "// Warmup Period": "Exclude initial period from statistics",
+    "warmup_sec": 5,
+    
+    "// Order Book Configuration": "",
+    "book_depth_levels": 10,
+    "simulate_fills": true
+}
+

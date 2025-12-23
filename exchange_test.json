@@ -1,0 +1,11 @@
+{
+    "duration_sec": 5,
+    "mode": "exchange",
+    "message_rate": 100000,
+    "message_pattern": "uniform",
+    "strategy": "momentum",
+    "affinity": [0, 1],
+    "use_polling": true,
+    "log_file": "results_exchange.csv"
+}
+

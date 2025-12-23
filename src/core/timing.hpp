@@ -71,9 +71,15 @@ inline void memory_fence() noexcept {
 }
 
 /**
- * @brief TSC frequency calibrator
+ * @brief TSC frequency and overhead calibrator
  * 
  * Calibrates TSC frequency by comparing against system clock.
+ * Also measures the overhead of timestamp operations.
+ * 
+ * The overhead is measured by calling the timestamp function back-to-back
+ * (1000 iterations) at program start - typically it's on the order of 30 ns.
+ * While 30 ns is negligible compared to microsecond latencies, we still
+ * account for it, especially if doing very fine measurements.
  */
 class TSCCalibrator {
 public:
@@ -82,7 +88,7 @@ public:
      * @param duration Calibration duration in milliseconds
      * @return Estimated TSC frequency in Hz
      */
-    static double calibrate(std::chrono::milliseconds duration = std::chrono::milliseconds(100)) {
+    static double calibrate_frequency(std::chrono::milliseconds duration = std::chrono::milliseconds(100)) {
         const auto start_time = std::chrono::high_resolution_clock::now();
         const auto start_tsc = rdtsc();
         
@@ -96,6 +102,43 @@ public:
         
         return static_cast<double>(tsc_delta) / elapsed;
     }
+    
+    /**
+     * @brief Measure the overhead of timestamp operations
+     * 
+     * Calls the timestamp function back-to-back many times and measures
+     * the average overhead. This overhead should be subtracted from
+     * latency measurements for accuracy.
+     * 
+     * @param iterations Number of iterations (default 1000)
+     * @return Average overhead in nanoseconds
+     */
+    static double calibrate_overhead(std::size_t iterations = 1000) {
+        // Warm up
+        for (std::size_t i = 0; i < 100; ++i) {
+            volatile auto t = rdtscp();
+            (void)t;
+        }
+        
+        // Measure back-to-back timestamp calls
+        std::vector<std::uint64_t> deltas;
+        deltas.reserve(iterations);
+        
+        for (std::size_t i = 0; i < iterations; ++i) {
+            auto t1 = rdtsc();
+            auto t2 = rdtscp();
+            deltas.push_back(t2 - t1);
+        }
+        
+        // Sort and take median (more robust than mean)
+        std::sort(deltas.begin(), deltas.end());
+        auto median_ticks = deltas[deltas.size() / 2];
+        
+        // Convert to nanoseconds using estimated frequency
+        // Assume ~3 GHz as rough estimate for conversion
+        constexpr double ROUGH_FREQ = 3e9;
+        return static_cast<double>(median_ticks) * 1e9 / ROUGH_FREQ;
+    }
 
     /**
      * @brief Convert TSC ticks to nanoseconds
@@ -103,6 +146,152 @@ public:
     static double ticks_to_nanos(std::uint64_t ticks, double frequency) {
         return static_cast<double>(ticks) * 1e9 / frequency;
     }
+    
+    // Backwards compatibility alias
+    static double calibrate(std::chrono::milliseconds duration = std::chrono::milliseconds(100)) {
+        return calibrate_frequency(duration);
+    }
+};
+
+/**
+ * @brief High-precision timer with automatic calibration
+ * 
+ * This is the recommended timer for HFT latency measurement.
+ * It uses TSC for <1ns resolution and automatically calibrates
+ * frequency and overhead at first use.
+ * 
+ * Features:
+ *   - Uses CPU's TSC register directly via inline assembly
+ *   - <1 ns resolution on modern CPUs with invariant TSC
+ *   - ~10-30 ns read overhead (measured and accounted for)
+ *   - Auto-calibrates frequency against system clock
+ *   - Thread-safe singleton initialization
+ */
+class HighPrecisionTimer {
+public:
+    /**
+     * @brief Get the singleton instance
+     */
+    static HighPrecisionTimer& instance() {
+        static HighPrecisionTimer timer;
+        return timer;
+    }
+    
+    /**
+     * @brief Get current timestamp in nanoseconds
+     */
+    [[nodiscard]] std::int64_t now_ns() const noexcept {
+        return static_cast<std::int64_t>(
+            static_cast<double>(rdtscp()) * ns_per_tick_
+        );
+    }
+    
+    /**
+     * @brief Get current timestamp in nanoseconds (raw, no overhead adjustment)
+     */
+    [[nodiscard]] std::int64_t now_ns_raw() const noexcept {
+        return static_cast<std::int64_t>(
+            static_cast<double>(rdtscp()) * ns_per_tick_
+        );
+    }
+    
+    /**
+     * @brief Measure elapsed time with overhead subtraction
+     * 
+     * @param start_ns Start timestamp from now_ns()
+     * @return Elapsed time in nanoseconds, with measurement overhead subtracted
+     */
+    [[nodiscard]] std::int64_t elapsed_ns(std::int64_t start_ns) const noexcept {
+        auto end_ns = now_ns();
+        auto raw_elapsed = end_ns - start_ns;
+        // Subtract measurement overhead (one timestamp read)
+        return std::max(static_cast<std::int64_t>(0), 
+                        raw_elapsed - static_cast<std::int64_t>(overhead_ns_));
+    }
+    
+    /**
+     * @brief Get calibrated TSC frequency in Hz
+     */
+    [[nodiscard]] double frequency() const noexcept { return frequency_; }
+    
+    /**
+     * @brief Get measured timestamp overhead in nanoseconds
+     */
+    [[nodiscard]] double overhead_ns() const noexcept { return overhead_ns_; }
+    
+    /**
+     * @brief Convert TSC ticks to nanoseconds
+     */
+    [[nodiscard]] double ticks_to_ns(std::uint64_t ticks) const noexcept {
+        return static_cast<double>(ticks) * ns_per_tick_;
+    }
+    
+    /**
+     * @brief Print calibration information
+     */
+    void print_calibration() const {
+        std::printf("High-Precision Timer Calibration:\n");
+        std::printf("  TSC Frequency:     %.2f GHz\n", frequency_ / 1e9);
+        std::printf("  ns per tick:       %.6f\n", ns_per_tick_);
+        std::printf("  Timestamp overhead: %.1f ns\n", overhead_ns_);
+        std::printf("  Resolution:        <1 ns\n");
+    }
+    
+    /**
+     * @brief Re-calibrate the timer (useful after CPU frequency changes)
+     */
+    void recalibrate() {
+        calibrate();
+    }
+
+private:
+    HighPrecisionTimer() {
+        calibrate();
+    }
+    
+    void calibrate() {
+        // Calibrate frequency
+        frequency_ = TSCCalibrator::calibrate_frequency(std::chrono::milliseconds(100));
+        ns_per_tick_ = 1e9 / frequency_;
+        
+        // Calibrate overhead
+        overhead_ns_ = TSCCalibrator::calibrate_overhead(1000);
+    }
+    
+    double frequency_ = 0;
+    double ns_per_tick_ = 0;
+    double overhead_ns_ = 0;
+};
+
+/**
+ * @brief RAII timer that automatically subtracts measurement overhead
+ * 
+ * Usage:
+ *   int64_t latency_ns;
+ *   {
+ *       CalibratedTimer timer(latency_ns);
+ *       // Code to measure
+ *   }
+ *   // latency_ns now contains the measured time with overhead subtracted
+ */
+class CalibratedTimer {
+public:
+    explicit CalibratedTimer(std::int64_t& output) noexcept
+        : output_(output)
+        , timer_(HighPrecisionTimer::instance())
+        , start_(timer_.now_ns_raw()) {}
+    
+    ~CalibratedTimer() {
+        output_ = timer_.elapsed_ns(start_);
+    }
+    
+    CalibratedTimer(const CalibratedTimer&) = delete;
+    CalibratedTimer& operator=(const CalibratedTimer&) = delete;
+
+private:
+    std::int64_t& output_;
+    const HighPrecisionTimer& timer_;
+    std::int64_t start_;
 };
 
 /**

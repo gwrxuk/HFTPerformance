@@ -1,0 +1,9 @@
+{
+    "duration_sec": 5,
+    "mode": "strategy",
+    "message_rate": 100000,
+    "strategy": "momentum",
+    "affinity": [0],
+    "log_file": "results_strategy.csv"
+}
+

@@ -172,6 +172,16 @@ target_link_libraries(order_gateway PRIVATE
     hft_protocol
 )
 
+# HFT Performance Tester
+add_executable(hftperf
+    src/apps/hftperf_main.cpp
+    src/strategy/user_strategy.cpp
+)
+target_link_libraries(hftperf PRIVATE
+    hft_matching
+    hft_core
+)
+
 # ============================================================================
 # Benchmark Suite
 # ============================================================================

@@ -1,0 +1,17 @@
+{
+    "mode": "external",
+    "duration_sec": 10,
+    "market_data_feed": {
+        "type": "udp",
+        "ip": "239.1.2.3",
+        "port": 5000
+    },
+    "order_listen": {
+        "type": "ipc_socket",
+        "path": "/tmp/exchange.sock"
+    },
+    "message_rate": 100000,
+    "strategy": "user_strategy",
+    "log_file": "results_external.csv"
+}
+

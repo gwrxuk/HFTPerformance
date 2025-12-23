@@ -1,0 +1,23 @@
+{
+    "duration_sec": 60,
+    "mode": "strategy",
+    "message_rate": 50000,
+    "strategy": "market_making",
+    "affinity": [0, 1],
+    "log_file": "results_flamegraph.csv",
+    
+    "// Flame graph profiling": "Captures CPU profile for analysis",
+    "enable_flame_graph": true,
+    "flame_graph_duration_sec": 30,
+    
+    "// Warmup to stabilize before profiling": "",
+    "warmup_sec": 10,
+    
+    "// Realistic simulation parameters": "",
+    "num_symbols": 10,
+    "symbol_prefix": "STOCK",
+    "trade_signal_ratio": 0.5,
+    "jitter_min_ns": 500,
+    "jitter_max_ns": 10000
+}
+

@@ -49,14 +49,14 @@ class MemoryPool {
     };
 
 public:
-    MemoryPool() noexcept {
-        // Initialize free list
-        free_head_ = reinterpret_cast<FreeNode*>(storage_.data());
+    MemoryPool() : storage_(new (std::align_val_t(Alignment)) std::uint8_t[Capacity * ALIGNED_SIZE]) {
+        // Initialize free list - use heap-allocated storage
+        free_head_ = reinterpret_cast<FreeNode*>(storage_.get());
         FreeNode* current = free_head_;
         
         for (std::size_t i = 1; i < Capacity; ++i) {
             FreeNode* next = reinterpret_cast<FreeNode*>(
-                storage_.data() + i * ALIGNED_SIZE);
+                storage_.get() + i * ALIGNED_SIZE);
             current->next = next;
             current = next;
         }
@@ -64,6 +64,8 @@ public:
         
         allocated_count_ = 0;
     }
+    
+    ~MemoryPool() = default;
 
     // Non-copyable, non-movable
     MemoryPool(const MemoryPool&) = delete;
@@ -138,8 +140,8 @@ public:
      */
     [[nodiscard]] bool owns(const void* ptr) const noexcept {
         const auto* byte_ptr = static_cast<const std::uint8_t*>(ptr);
-        const auto* start = storage_.data();
-        const auto* end = storage_.data() + storage_.size();
+        const auto* start = storage_.get();
+        const auto* end = storage_.get() + Capacity * ALIGNED_SIZE;
         
         if (byte_ptr < start || byte_ptr >= end) {
             return false;
@@ -186,7 +188,14 @@ public:
     }
 
 private:
-    alignas(Alignment) std::array<std::uint8_t, Capacity * ALIGNED_SIZE> storage_;
+    // Deleter for aligned memory
+    struct AlignedDeleter {
+        void operator()(std::uint8_t* ptr) const {
+            ::operator delete[](ptr, std::align_val_t(Alignment));
+        }
+    };
+    
+    std::unique_ptr<std::uint8_t[], AlignedDeleter> storage_;
     FreeNode* free_head_;
     std::size_t allocated_count_;
 };
